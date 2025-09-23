@@ -29,6 +29,8 @@ nav {
   width: 100%;
   height: 50px;
   z-index: 1000;
+  animation: enter-nav 0.8s backwards;
+  animation-delay: 0.5s;
 }
 nav div {
   position: fixed;
@@ -38,7 +40,7 @@ nav div {
   height: 48px;
   top: 0;
   backdrop-filter: blur(5px);
-  background-color: #00000050;
+  background-color: #00000025;
 }
 nav ul {
   list-style: none;
@@ -82,6 +84,7 @@ nav ul li ul li a:hover {
 }
 /* dropdown hover */
 nav ul li:hover > ul {
+
   display: flex;
   background-color: #00000025;
   border-radius: 10px;
@@ -101,11 +104,18 @@ nav ul li:hover > ul {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background: linear-gradient(to bottom, #ef400b99, #ef400b00); /* contoh bg */
   color: white;     
+  background: linear-gradient(to bottom, #ef400b99, #ef400b00);
 }
-.hero p {
+.hero p:nth-child(1) {
   max-width: 700px;
+  animation: enter 0.5s backwards cubic-bezier(.32,.31,.49,1.18);
+  animation-delay: 1s;
+}
+.hero p:nth-child(2) {
+  max-width: 700px;
+  animation: enter 0.5s backwards cubic-bezier(.32,.31,.49,1.18);
+  animation-delay: 1.1s;
 }
 .hero p span {
   transition: all 0.3s ease;
@@ -126,6 +136,8 @@ nav ul li:hover > ul {
   align-items: center;
   box-shadow: #ce380a 0 4px;
   transition: all 0.3s ease;
+  animation: enter 0.5s backwards cubic-bezier(.32,.31,.49,1.18);
+  animation-delay: 1.2s;
 }
 .tombol a {
   text-decoration: none;
@@ -137,12 +149,20 @@ nav ul li:hover > ul {
   transform: translateY(4px);
   box-shadow: 0 0 0 0 #ce380a;
 }
+.section-card {
+  background: #ffffff20;
+  margin: 1em;
+  padding: 0.5em;
+  text-align: center;
+  max-height: fit-content;
+  border-radius: 1rem;
+}
 .isian-card {
   display: flex;
   justify-content: center;
+  align-items: center;
   margin: 1em;
   flex-direction: column;
-  align-items: center;
 }
 .card {
   background-color: #ffffff10;
@@ -150,12 +170,14 @@ nav ul li:hover > ul {
   height: 14em;
   margin: 1.5em;
   border-radius: 1.5em;
+  border: var(--primary-color) solid 0.75px;
 }
 .background-card {
-  background-color: #222222;
+  background-color: #ffffff10;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
   width: fit-content;
   border-radius: 32px;
 }
@@ -164,7 +186,6 @@ nav ul li:hover > ul {
   justify-content: center;
   align-items: center;
   margin: 0 2em 2em 2em;
-  max-width: 1200px;
 }
 .case-tombol-produk {
   display: flex;
@@ -193,4 +214,102 @@ nav ul li:hover > ul {
   transform: scale(0.995); 
   transform: translateY(4px);
   box-shadow: 0 0 0 0 #ce380a;
+}
+.section-plan {
+  background: #ffffff20;
+  margin: 1em;
+  padding: 0.5em;
+  text-align: left;
+  max-height: fit-content;
+  border-radius: 1rem;
+}
+.isian-card-plan {
+  display: flex;
+  justify-content: center;
+  margin: 1.5em;
+  flex-direction: column;
+}
+.card-plan {
+  background-color: #ffffff10;
+  width: 18em;
+  height: 26em;
+  margin: 1.5em;
+  border-radius: 1.5em;
+  border: var(--primary-color) solid 0.75px;
+}
+.card-plan:nth-child(2){
+  scale: 1.05;
+}
+.background-card-plan {
+  background-color: #ffffff10;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  border-radius: 32px;
+}
+.bg-background-card-plan {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 2em 2em 2em;
+}
+.btn {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  padding: 12px 28px;
+  font-size: 16px;
+  font-weight: 600;
+  border: 1px solid var(--primary-color);
+  border-radius: 12px;
+  cursor: pointer;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 4px #ce380a;
+  transition: all 0.3s ease;
+}
+.btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  /* transform: scale(0.995);  */
+  transform: translateY(4px);
+  box-shadow: 0 0 0 0 #ce380a;
+}
+.btn:active {
+  transform: scale(0.95);
+}
+.best-choice {
+  position: absolute;
+  top: -1;
+  right: -1;
+  font-size: 0.85rem;
+  /* transform: translate(-8px, 8px); */
+  background: var(--primary-color);
+  padding: 8px;
+  border-top-right-radius: 16px;
+  border-bottom-left-radius: 16px;
+}
+
+@keyframes enter {
+  from{
+    transform: translateY(100%);
+    opacity: 0;
+    filter: blur(4px);
+  }
+  to{
+    transform: translateY(0);
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+@keyframes enter-nav {
+  from{
+    transform: translateY(-100%);
+    opacity: 0;
+    filter: blur(4px);
+  }
+  to{
+    transform: translateY(0);
+    opacity: 1;
+    filter: blur(0);
+  }
 }
