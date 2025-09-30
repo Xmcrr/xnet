@@ -62,6 +62,15 @@ window.addEventListener('DOMContentLoaded', function() {
                 popup.style.display = 'none';
             }, 2200);
             form.reset();
+            alert('Formulir Terkirim');
+        });
+    }
+
+    // Batasi input nomor telepon hanya angka
+    var phoneInput = document.querySelector('input[name="phone"]');
+    if (phoneInput) {
+        phoneInput.addEventListener('input', function(e) {
+            this.value = this.value.replace(/[^0-9]/g, '');
         });
     }
 });
