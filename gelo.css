@@ -148,7 +148,7 @@ nav div {
   height: 48px;
   top: 0;
   backdrop-filter: blur(5px);
-  background-color: #00000025;
+  background-color: #00000050;
 }
 nav ul {
   list-style: none;
@@ -194,7 +194,7 @@ nav ul li ul li a:hover {
 nav ul li:hover > ul {
 
   display: flex;
-  background-color: #00000025;
+  background-color: #00000050;
   border-radius: 10px;
   backdrop-filter: blur(5px);
   border: 0.5px solid #ffffff55;
@@ -536,7 +536,7 @@ nav ul li:hover > ul {
 }
 /* Footer Modern X-Net */
 .footer {
-  background: #181818;
+  background: #111111;
   color: #fff;
   padding: 3em 0 1.5em 0;
   display: flex;
