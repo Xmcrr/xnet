@@ -1,6 +1,6 @@
-window.onbeforeunload = function () {
-    window.scrollTo(0,0);
-};
+window.addEventListener('load', function() {
+    window.scrollTo(0, 0);
+});
 
 window.addEventListener('DOMContentLoaded', function() {
     var hero = document.querySelector('.hero');
@@ -53,16 +53,10 @@ window.addEventListener('DOMContentLoaded', function() {
 
     // Footer Contact Us popup
     var form = document.getElementById('contact-footer-form');
-    var popup = document.getElementById('footer-popup');
-    if(form && popup) {
+    if(form) {
         form.addEventListener('submit', function(e) {
             e.preventDefault();
-            popup.style.display = 'block';
-            setTimeout(function() {
-                popup.style.display = 'none';
-            }, 2200);
             form.reset();
-            alert('Formulir Terkirim');
         });
     }
 
