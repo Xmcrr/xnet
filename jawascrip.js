@@ -50,4 +50,18 @@ window.addEventListener('DOMContentLoaded', function() {
     // Jalankan saat scroll dan saat load
     window.addEventListener('scroll', animateOnCenter);
     animateOnCenter();
+
+    // Footer Contact Us popup
+    var form = document.getElementById('contact-footer-form');
+    var popup = document.getElementById('footer-popup');
+    if(form && popup) {
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            popup.style.display = 'block';
+            setTimeout(function() {
+                popup.style.display = 'none';
+            }, 2200);
+            form.reset();
+        });
+    }
 });
