@@ -302,7 +302,7 @@ nav ul li:hover > ul {
   animation-range: entry 0% cover 25%;
 }
 .background-card {
-  background-color: #ffffff10;
+  background-color: #333333;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -380,7 +380,7 @@ nav ul li:hover > ul {
   scale: 1.05;
 }
 .background-card-plan {
-  background-color: #ffffff10;
+  background-color: #333333;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -447,23 +447,27 @@ nav ul li:hover > ul {
 }
 .isian-card-review {
   display: flex;
+  flex-direction: column;
+  height: 100%;
   justify-content: center;
   margin: 1.5em;
-  flex-direction: column;
 }
 .card-review {
   background-color: #ffffff10;
   width: 18em;
-  height: 20em;
+  min-height: 20em;
   margin: 1.5em;
   border-radius: 1.5em;
   border: var(--primary-color) solid 0.75px;
   animation: fade linear;
   animation-timeline: view();
   animation-range: entry 0% cover 40%;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 .background-card-review {
-  background-color: #ffffff10;
+  background-color: #333333;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -479,6 +483,17 @@ nav ul li:hover > ul {
   justify-content: center;
   align-items: center;
   margin: 0 2em 2em 2em;
+}
+.profile-review {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: auto;
+  margin-bottom: 16px;
+}
+.profile-review div {
+  margin: 0 1em;
+  text-align: left;
 }
 .rating {
   display: flex;
@@ -627,13 +642,13 @@ nav ul li:hover > ul {
   background: #222;
   color: #fff;
   border: none;
-  border-bottom: 2px solid var(--primary-color);
+  border-bottom: 2px solid #ffffff50;
   border-radius: 0;
   padding: 0.6em 0.5em 0.6em 0.5em;
   font-size: 1em;
   resize: none;
   outline: none;
-  transition: border-color 0.2s;
+  transition: border-bottom 0.5s;
 }
 
 .footer-box input:focus,
@@ -688,4 +703,58 @@ nav ul li:hover > ul {
   width: 1.2em;
   height: 1.2em;
   display: block;
+}
+.sosmet {
+  display: flex;
+  gap: 1rem;
+}
+.sosmet a:hover {
+  color: #fff;
+  opacity: 1;
+}
+/* Floating label group */
+.form-group {
+  position: relative;
+  margin-bottom: 1.5em;
+  width: 100%;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  background: #222;
+  color: #fff;
+  border: none;
+  border-bottom: 2px solid #ffffff50;
+  border-radius: 0;
+  padding: 0.9em 0.5em 0.5em 0.5em;
+  font-size: 1em;
+  font-family: inherit;
+  outline: none;
+  transition: border-bottom 0.5s;
+}
+
+.form-group label {
+  position: absolute;
+  left: 0.5em;
+  top: 0.9em;
+  color: #aaa;
+  font-size: 1em;
+  pointer-events: none;
+  background: transparent;
+  transition: all 0.2s cubic-bezier(.4,0,.2,1);
+}
+
+/* Saat input focus atau ada isinya, label naik ke atas */
+.form-group input:focus + label,
+.form-group input:not(:placeholder-shown) + label,
+.form-group textarea:focus + label,
+.form-group textarea:not(:placeholder-shown) + label {
+  top: -16px;
+  left: 0;
+  font-size: 0.85em;
+  color: var(--primary-color);
+  background: #222;
+  padding: 0 0.3em;
+  border-top-left-radius: 5px;
 }
