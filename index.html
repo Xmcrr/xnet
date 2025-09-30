@@ -213,8 +213,10 @@
       <div class="footer-box">
         <div class="footer-title">Contact Us</div>
         <form id="contact-footer-form" autocomplete="off">
-          <input type="email" name="email" placeholder="Email kamu" required>
-          <input type="tel" name="phone" placeholder="Nomor Telepon" required>
+          <input type="email" name="email" placeholder="Email kamu" required autocomplete="email">
+          <input type="tel" name="phone" placeholder="Nomor Telepon" required autocomplete="tel"
+       pattern="[0-9]{9,12}" inputmode="numeric" maxlength="12" minlength="9"
+       title="Masukkan nomor telepon yang valid (9-12 digit)">
           <textarea name="alamat" placeholder="Alamat Rumah" required></textarea>
           <button type="submit" class="btn" title="Kirim">
             <svg viewBox="0 0 24 24" fill="none">
@@ -226,7 +228,6 @@
       <hr style="opacity: 0.25; max-width: 80%;">
       <p style="text-align: center;">&copy; 2025 X-Net | XGZ - IF1. All rights reserved.</p>
     </footer>
-    <div id="footer-popup" class="footer-popup">Pesan berhasil dikirim!</div>
     <script src="jawascrip.js"></script>
   </body>
 </html>
