@@ -4,6 +4,12 @@
   --primary-light-hover-color: #f3714a;
   --primary-active-color: #ff8762;
 }
+html {
+  scroll-behavior: smooth;
+  scrollbar-color: #ef400b #33333300;
+  scrollbar-width: thin;
+  scrollbar-gutter: stable;
+}
 head {
   box-sizing: border-box;
 }
@@ -165,10 +171,15 @@ nav ul li a {
   padding: 0 20px;
   text-decoration: none;
   color: white;
-  transition: color 0.3s ease;
+  transition: background 0.3s ease;
+  background: #00000000;
+  border-radius: 32px;
+  max-height: 48px;
 }
 nav ul li a:hover {
-  color: var(--primary-color);
+  background: #ef400b;
+  border-radius: 32px;
+  max-height: 48px;
 }
 /* dropdown */
 nav ul li ul {
@@ -185,17 +196,14 @@ nav ul li ul {
 nav ul li ul li a {
   padding: 10px 20px;
   line-height: normal;
-  transition: color 0.3s ease;
-}
-nav ul li ul li a:hover {
-  color: var(--primary-color);
+  transition: background 0.3s ease;
 }
 /* dropdown hover */
 nav ul li:hover > ul {
-
+  padding: 8px;
   display: flex;
   background-color: #00000050;
-  border-radius: 10px;
+  border-radius: 24px;
   backdrop-filter: blur(5px);
   border: 0.5px solid #ffffff55;
 }
@@ -252,21 +260,22 @@ nav ul li:hover > ul {
   backdrop-filter: blur();
   box-shadow: 0 4px #ce380a;
   margin-top: 3.25em;
-  transition: all 0.3s ease;
+  transition: all 0.1s linear;
   animation: enter 0.5s backwards;
   animation-delay: 1.5s;
 }
 .btn-h:hover {
+  background-color: var(--primary-light-hover-color);
+  /* transform: scale(0.95); */
+}
+.btn-h:active {
   background: var(--primary-light-hover-color);
   /* transform: scale(0.995);  */
   transform: translateY(4px);
-  box-shadow: 0 0 0 0 #ce380a;
-}
-.btn-h:active {
-  transform: scale(0.95);
+  box-shadow: 0 0 0 0 #ce380a;  
 }
 .section-card {
-  background: #ffffff20;
+  background: #33333390;
   margin: 1em;
   padding: 0.5em;
   text-align: center;
@@ -348,7 +357,7 @@ nav ul li:hover > ul {
   box-shadow: 0 0 0 0 #ce380a;
 }
 .section-plan {
-  background: #ffffff20;
+  background: #33333390;
   margin: 1em;
   padding: 0.5em;
   text-align: left;
@@ -397,6 +406,7 @@ nav ul li:hover > ul {
   align-items: center;
   margin: 0 2em 2em 2em;
 }
+/* asset button bagus yg gaada primary colornya */
 .btn {
   background: rgba(255, 255, 255, 0.1);
   color: white;
@@ -408,19 +418,41 @@ nav ul li:hover > ul {
   cursor: pointer;
   backdrop-filter: blur();
   box-shadow: 0 4px #ce380a;
-  transition: all 0.3s ease;
+  transition: all 0.1s linear;
 }
 .btn:hover {
+  color: var(--primary-color);
+  /* transform: scale(0.95); */
+}
+.btn:active {
   background: rgba(255, 255, 255, 0.2);
   /* transform: scale(0.995);  */
   transform: translateY(4px);
   box-shadow: 0 0 0 0 #ce380a;
 }
-.btn:hover:nth-child(2) {
-  background: var(--primary-light-hover-color);
+  /* asset button bagus yg ada primary crlornya */
+.btn-s {
+  background: var(--primary-color);
+  color: white;
+  padding: 12px 28px;
+  font-size: 16px;
+  font-weight: 600;
+  border: 1px solid var(--primary-color);
+  border-radius: 12px;
+  cursor: pointer;
+  backdrop-filter: blur();
+  box-shadow: 0 4px #ce380a;
+  transition: all 0.1s linear;
 }
-.btn:active {
-  transform: scale(0.95);
+.btn-s:hover {
+  background-color: var(--primary-light-hover-color);
+  /* transform: scale(0.95); */
+}
+.btn-s:active {
+  background: var(--primary-light-hover-color);
+  /* transform: scale(0.995);  */
+  transform: translateY(4px);
+  box-shadow: 0 0 0 0 #ce380a;  
 }
 .best-choice {
   position: absolute;
@@ -433,8 +465,28 @@ nav ul li:hover > ul {
   border-top-right-radius: 16px;
   border-bottom-left-radius: 16px;
 }
+.fitur-paket {
+  list-style: none;
+  padding-left: 0;
+}
+
+.fitur-paket li {
+  position: relative;
+  padding-left: 28px; /* space buat icon */
+}
+.fitur-paket li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%); /* bener2 center */
+  width: 20px;
+  height: 20px;
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'><path d='M20 6 9 17l-5-5'/></svg>") no-repeat center;
+  background-size: contain;
+}
 .section-review {
-  background: #ffffff20;
+  background: #33333390;
   margin: 1em;
   padding: 0.5em;
   text-align: center;
@@ -559,13 +611,13 @@ nav ul li:hover > ul {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 2.5em;
+  row-gap: space-between;
+  column-gap: 0.5em;
   border-top: 2px solid var(--primary-color);
   box-shadow: 0 -2px 24px 0 #ef400b33;
   position: relative;
   z-index: 10;
 }
-
 .footer-box {
   min-width: 180px;
   max-width: 260px;
@@ -574,11 +626,9 @@ nav ul li:hover > ul {
   flex-direction: column;
   gap: 0.5em;
 }
-
 .footer-box:first-child {
   flex: 2;
 }
-
 .footer-box p,
 .footer-box div,
 .footer-box a {
@@ -589,12 +639,10 @@ nav ul li:hover > ul {
   text-decoration: none;
   transition: color 0.2s;
 }
-
 .footer-box a:hover {
   color: var(--primary-color);
   opacity: 1;
 }
-
 .footer-box .footer-title {
   font-size: 1.25em;
   font-weight: bold;
@@ -605,23 +653,19 @@ nav ul li:hover > ul {
   text-align: left;
   display: block;
 }
-
 .footer-social {
   display: flex;
   gap: 1em;
   margin-top: 0.5em;
 }
-
 .footer-social a {
   color: #fff;
   font-size: 1.5em;
   transition: color 0.2s;
 }
-
 .footer-social a:hover {
   color: var(--primary-color);
 }
-
 .footer hr {
   opacity: 0.15;
   border: none;
@@ -629,7 +673,6 @@ nav ul li:hover > ul {
   margin: 2em auto 1em auto;
   width: 80%;
 }
-
 .footer-copyright {
   width: 100%;
   text-align: center;
@@ -652,12 +695,10 @@ nav ul li:hover > ul {
   outline: none;
   transition: border-bottom 0.5s;
 }
-
 .footer-box input:focus,
 .footer-box textarea:focus {
   border-bottom: 2px solid var(--primary-hover-color);
 }
-
 /* Samakan font dan padding textarea dengan input */
 .footer-box textarea {
   font-family: inherit;
@@ -668,7 +709,6 @@ nav ul li:hover > ul {
   box-sizing: border-box;
   line-height: 1.4;
 }
-
 /* Tombol Kirim compact ala WhatsApp */
 .footer-box form {
   display: flex;
@@ -676,7 +716,6 @@ nav ul li:hover > ul {
   gap: 0.5em;
   align-items: flex-end;
 }
-
 /* .footer-box form .btn {
   min-width: 0;
   width: 38px;
@@ -705,12 +744,13 @@ nav ul li:hover > ul {
   width: 1.2em;
   height: 1.2em;
   display: block;
-} */
+}
 .sosmet {
   display: flex;
-  gap: 1.5em;
+  gap: 1em;
 }
-.sosmet a:hover {
+
+.sosmet div a:hover {
   color: #fff;
   opacity: 1;
 }
@@ -720,7 +760,6 @@ nav ul li:hover > ul {
   margin-bottom: 1.5em;
   width: 100%;
 }
-
 .form-group input,
 .form-group textarea {
   width: 16em;
@@ -735,7 +774,6 @@ nav ul li:hover > ul {
   outline: none;
   transition: border-bottom 0.5s;
 }
-
 .form-group label {
   position: absolute;
   left: 0.5em;
@@ -746,7 +784,6 @@ nav ul li:hover > ul {
   background: transparent;
   transition: all 0.2s cubic-bezier(.4,0,.2,1);
 }
-
 /* Saat input focus atau ada isinya, label naik ke atas */
 .form-group input:focus + label,
 .form-group input:not(:placeholder-shown) + label,
