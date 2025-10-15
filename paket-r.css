@@ -1,0 +1,585 @@
+:root {
+    --primary-color: #ef400b;
+    --primary-hover-color: #ce380a;
+    --primary-light-hover-color: #f3714a;
+    --primary-active-color: #ff8762;
+}
+html {
+    scroll-behavior: smooth;
+    scrollbar-color: #ef400b #33333300;
+    scrollbar-width: thin;
+    scrollbar-gutter: stable;
+}
+body {
+    font-family: "Montserrat", Helvetica, sans-serif;
+    margin: 0;
+    background-color: #000;
+}
+@keyframes footer {
+  from{
+    transform: translateY(100%);
+    opacity: 0;
+    filter: blur(10px);
+  }
+  to{
+    transform: translateY(0);
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+@keyframes enter {
+  from{
+    transform: translateY(100%);
+    opacity: 0;
+    filter: blur(10px);
+  }
+  to{
+    transform: translateY(0);
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+@keyframes enter-nav {
+  from{
+    transform: translateY(-100%);
+    opacity: 0;
+    filter: blur(2px);
+  }
+  to{
+    transform: translateY(0);
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+@keyframes slideinleft {
+  from {
+    transform: translateX(-128px);
+    opacity: 0;
+    /* filter: blur(2px); */
+  }
+  to{
+    transform: translateX(0);
+    opacity: 1;
+    /* filter: blur(0); */
+  }
+}
+.cihuy {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 50px;
+}
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    height: 50px;
+    line-height: 50px;
+    width: 100%;
+    height: 50px;
+    z-index: 1000;
+    animation: enter-nav 0.8s backwards;
+    animation-delay: 0.5s;
+}
+nav div {
+    position: fixed;
+    display: flex;
+    z-index: 0;
+    width: 100%;
+    height: 48px;
+    top: 0;
+    backdrop-filter: blur(5px);
+    background-color: #00000075;
+}
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+nav ul li {
+    position:relative;
+}
+nav ul li a {
+    display: flex;
+    padding: 0 20px;
+    text-decoration: none;
+    color: white;
+    transition: background 0.3s ease;
+    background: #00000000;
+    border-radius: 32px;
+    max-height: 48px;
+}
+nav ul li a:hover {
+    background: #ef400b;
+    border-radius: 32px;
+    max-height: 48px;
+}
+/* dropdown */
+nav ul li ul {
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    min-width: auto;
+    flex-direction: column;
+     padding: 0;
+    z-index: 1000;
+    text-align: center;
+}
+nav ul li ul li a {
+    padding: 10px 20px;
+    line-height: normal;
+    transition: background 0.3s ease;
+}
+/* dropdown hover */
+nav ul li:hover > ul {
+    padding: 8px;
+    display: flex;
+    background-color: #00000050;
+    border-radius: 24px;
+    backdrop-filter: blur(5px);
+    border: 0.5px solid #ffffff55;
+}
+.aduh {
+  color: #ef400b;
+  transition: all 0.3s ease;
+}
+.aduh:hover{
+  color: white;
+}
+#c {
+  color: #ef400b;
+  transition: all 0.3s ease;
+}
+#c:hover{
+  color: white;
+}
+@keyframes bg-anim {
+  from {
+    transform: translateY(90px) scale(0) rotate(0deg);
+    opacity: 0.75;
+    filter: blur(0);
+  }
+  to {
+    transform: translateY(0) scale(1) rotate(180deg);
+    opacity: 0;
+    filter: blur(5px);
+  }
+}
+@keyframes bg-anim-left {
+  from {
+    transform: translateY(90px) rotate(0deg) scale(0);
+    opacity: 0.75;
+    filter: blur(0);
+  }
+  to {
+    transform: translateY(0) rotate(-180deg) scale(1);
+    opacity: 0;
+    filter: blur(5px);
+  }
+}
+.bg-animasi {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.box-animasi div{
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  background-color: transparent;
+  border: 6px solid #ef400b;
+  box-shadow: 0 0 4px 4px #ef400b, 0 0 48px 0 #ef400b55;
+}
+.box-animasi div:nth-child(1)  {
+  top: 62%; 
+  left: 57%; 
+  animation: bg-anim 7.2s linear infinite;
+}
+.box-animasi div:nth-child(2)  {
+  top: 33%; 
+  left: 77%; 
+  animation: bg-anim-left 5.8s linear infinite; }
+.box-animasi div:nth-child(3)  {
+  top: 27%; 
+  left: 13%; 
+  animation: bg-anim 8.1s linear infinite;
+}
+.box-animasi div:nth-child(4)  {
+  top: 69%; 
+  left: 13%; 
+  animation: bg-anim-left 6.4s linear infinite; }
+.box-animasi div:nth-child(5)  {
+  top: 27%; 
+  left: 83%; 
+  animation: bg-anim 7.7s linear infinite;
+}
+.box-animasi div:nth-child(6)  {
+  top: 53%; 
+  left: 41%; 
+  animation: bg-anim-left 5.6s linear infinite; }
+.box-animasi div:nth-child(7)  {
+  top: 74%; 
+  left: 29%; 
+  animation: bg-anim 8.3s linear infinite;
+}
+.box-animasi div:nth-child(8)  {
+  top: 44%; 
+  left: 62%; 
+  animation: bg-anim-left 6.9s linear infinite; }
+.box-animasi div:nth-child(9)  {
+  top: 69%; 
+  left: 45%; 
+  animation: bg-anim 7.3s linear infinite;
+}
+.box-animasi div:nth-child(10) {
+  top: 66%; 
+  left: 81%; 
+  animation: bg-anim-left 5.4s linear infinite; }
+.box-animasi div:nth-child(11) {
+  top: 21%; 
+  left: 35%; 
+  animation: bg-anim 6.8s linear infinite;
+}
+.box-animasi div:nth-child(12) {
+  top: 59%; 
+  left: 73%; 
+  animation: bg-anim-left 7.5s linear infinite; }
+.box-animasi div:nth-child(13) {
+  top: 38%; 
+  left: 25%; 
+  animation: bg-anim 8.0s linear infinite;
+}
+.box-animasi div:nth-child(14) {
+  top: 79%; 
+  left: 67%; 
+  animation: bg-anim-left 6.1s linear infinite; }
+.box-animasi div:nth-child(15) {
+  top: 49%; 
+  left: 48%; 
+  animation: bg-anim 7.9s linear infinite;
+}
+/* asset button bagus yg gaada primary colornya */
+.btn {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  padding: 12px 28px;
+  font-size: 16px;
+  font-weight: 600;
+  border: 1px solid var(--primary-color);
+  border-radius: 12px;
+  cursor: pointer;
+  backdrop-filter: blur();
+  box-shadow: 0 4px #ce380a;
+  transition: all 0.1s linear;
+}
+.btn:hover {
+  color: var(--primary-color);
+  background: rgba(255, 255, 255, 0.2);
+  /* transform: scale(0.95); */
+}
+.btn:active {
+  /* transform: scale(0.995);  */
+  transform: translateY(4px);
+  box-shadow: 0 0 0 0 #ce380a;
+}
+.header {
+    position: relative;
+    display: flex;
+    background-color: #ef400b00;
+    width: 100%;
+    height: 50vh;
+    justify-content: center;
+    align-items: center;
+}
+.header::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100vh;
+    opacity: 1;
+    background: linear-gradient(to bottom, #ef400b99, #ef400b00);
+}
+.header-container {
+  position: relative;
+  top: 50px;
+  /* background-color: #33333390; */
+  margin: 1em;
+  padding: 1em;
+  border-radius: 1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header-content {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  text-align: center;
+  max-width: 1000px;
+}
+.header-content p:nth-child(1) {
+  font-size: 2.5em;
+  font-weight: bold;
+  margin: 0.5em 0;
+  animation: enter 0.5s backwards 1s;
+}
+.header-content p:nth-child(2) {
+  font-size: 1em;
+  animation: enter 0.5s backwards 1.2s;
+}
+
+
+
+
+
+
+
+.fitur-paket {
+  list-style: none;
+  padding-left: 0;
+}
+.fitur-paket li {
+  position: relative;
+  padding-left: 28px; /* space buat icon */
+}
+.fitur-paket li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%); /* bener2 center */
+  width: 20px;
+  height: 20px;
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'><path d='M20 6 9 17l-5-5'/></svg>") no-repeat center;
+  background-size: contain;
+}
+/* Footer Modern X-Net */
+.footer {
+  background: #111111;
+  color: #fff;
+  padding: 3em 0 1.5em 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  row-gap: space-between;
+  column-gap: 0.5em;
+  border-top: 2px solid var(--primary-color);
+  box-shadow: 0 -2px 24px 0 #ef400b33;
+  position: relative;
+  z-index: 10;
+  animation: footer linear;
+  animation-timeline: view();
+  animation-range: entry -200%;
+}
+.footer-box {
+  min-width: 180px;
+  max-width: 260px;
+  margin: 0 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+.footer-box:first-child {
+  flex: 2;
+}
+.footer-box p,
+.footer-box div,
+.footer-box a {
+  color: #fff;
+  opacity: 0.85;
+  font-size: 1em;
+  margin: 0.2em 0;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.footer-box a:hover {
+  color: var(--primary-color);
+  opacity: 1;
+}
+.footer-box .footer-title {
+  font-size: 1.25em;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 0.5em;
+  letter-spacing: 1px;
+  opacity: 1;
+  text-align: left;
+  display: block;
+}
+.footer-social {
+  display: flex;
+  gap: 1em;
+  margin-top: 0.5em;
+}
+.footer-social a {
+  color: #fff;
+  font-size: 1.5em;
+  transition: color 0.2s;
+}
+.footer-social a:hover {
+  color: var(--primary-color);
+}
+.footer hr {
+  opacity: 0.15;
+  border: none;
+  border-top: 1px solid #fff;
+  margin: 2em auto 1em auto;
+  width: 80%;
+}
+.footer-copyright {
+  width: 100%;
+  text-align: center;
+  font-size: 0.95em;
+  opacity: 0.6;
+  margin-top: 1em;
+  letter-spacing: 0.5px;
+}
+/* Footer Contact Us */
+.footer-box input,
+.footer-box textarea {
+  background: #222;
+  color: #fff;
+  border: none;
+  border-bottom: 2px solid #ffffff50;
+  border-radius: 0;
+  padding: 0.6em 0.5em 0.6em 0.5em;
+  font-size: 1em;
+  resize: none;
+  outline: none;
+  transition: border-bottom 0.5s;
+}
+.footer-box input:focus,
+.footer-box textarea:focus {
+  border-bottom: 2px solid var(--primary-hover-color);
+}
+/* Samakan font dan padding textarea dengan input */
+.footer-box textarea {
+  font-family: inherit;
+  font-size: 1em;
+  padding: 0.6em 0.5em 0.6em 0.5em;
+  min-height: 38px;
+  max-height: 120px;
+  box-sizing: border-box;
+  line-height: 1.4;
+}
+/* Tombol Kirim compact ala WhatsApp */
+.footer-box form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  align-items: flex-end;
+}
+/* Icon kirim (SVG) di dalam tombol */
+.footer-box form .btn svg {
+  width: 1.2em;
+  height: 1.2em;
+  display: block;
+}
+.sosmet {
+  display: flex;
+  gap: 1em;
+}
+
+.sosmet div a:hover {
+  color: #fff;
+  opacity: 1;
+}
+/* Floating label group */
+.form-group {
+  position: relative;
+  margin-bottom: 1.5em;
+  width: 100%;
+}
+.form-group input,
+.form-group textarea {
+  width: 16em;
+  background: #222;
+  color: #fff;
+  border: none;
+  border-bottom: 2px solid #ffffff50;
+  border-radius: 0;
+  padding: 0.9em 0.5em 0.5em 0.5em;
+  font-size: 1em;
+  font-family: inherit;
+  outline: none;
+  border-radius: 1em;
+  transition: all 0.2s cubic-bezier(.4,0,.2,1);
+}
+.form-group input:focus,
+.form-group textarea:focus {
+  border-top-left-radius: 0;
+}
+.form-group label {
+  position: absolute;
+  left: 0.5em;
+  top: 0.9em;
+  color: #aaa;
+  font-size: 1em;
+  pointer-events: none;
+  background: transparent;
+  transition: all 0.2s cubic-bezier(.4,0,.2,1);
+}
+/* Saat input focus atau ada isinya, label naik ke atas */
+.form-group input:focus + label,
+.form-group input:not(:placeholder-shown) + label,
+.form-group textarea:focus + label,
+.form-group textarea:not(:placeholder-shown) + label {
+  top: -8px;
+  left: 0;
+  font-size: 0.75em;
+  color: var(--primary-color);
+  background: #222;
+  padding: 0 0.3em;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.contact-footer-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.contact-footer-form .btn {
+  align-self: flex-end;
+  background: var(--primary-color);
+  color: white;
+  padding: 12px 28px;
+  font-size: 16px;
+  font-weight: 600;
+  border: 1px solid var(--primary-color);
+  border-radius: 12px;
+  cursor: pointer;
+  backdrop-filter: blur();
+  box-shadow: 0 4px #ce380a;
+  transition: all 0.3s ease;
+} 
+/* asset button bagus yg ada primary crlornya */
+.btn-s {
+  background: var(--primary-color);
+  color: white;
+  padding: 12px 28px;
+  font-size: 16px;
+  font-weight: 600;
+  border: 1px solid var(--primary-color);
+  border-radius: 12px;
+  cursor: pointer;
+  backdrop-filter: blur();
+  box-shadow: 0 4px #ce380a;
+  transition: all 0.1s linear;
+}
+.btn-s:hover {
+  background-color: var(--primary-light-hover-color);
+  /* transform: scale(0.95); */
+}
+.btn-s:active {
+  /* transform: scale(0.995);  */
+  transform: translateY(4px);
+  box-shadow: 0 0 0 0 #ce380a;  
+}
