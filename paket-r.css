@@ -361,6 +361,147 @@ nav ul li:hover > ul {
   background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'><path d='M20 6 9 17l-5-5'/></svg>") no-repeat center;
   background-size: contain;
 }
+.case {
+  position: relative;
+  margin: 2em 1em;
+  padding: 1em;
+  border-radius: 1em;
+  display: flex;
+  justify-content: center;
+  color: white;
+  animation: enter 1s backwards 1.2s;
+}
+
+.bg-pcr-1 {
+  display: flex;
+  flex-direction: column;
+  background-color: #33333390;
+  padding: 2em;
+  border-radius: 3em;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 0 24px #ef400b33;
+}
+
+.bg-pcr-1 h1 {
+  font-size: 2em;
+  margin: 0;
+  text-align: center;
+  color: #fff;
+  text-shadow: 0 0 10px #ef400b55;
+}
+
+.bg-pcr-1 p {
+  font-size: 1em;
+  margin: 0.75em 1em 1.5em 1em;
+  text-align: center;
+  opacity: 0.9;
+}
+
+.case-card {
+  display: flex;
+  justify-content: center;
+  align-items: stretch; /* <— ini biar tinggi card seragam */
+  flex-wrap: wrap;
+  gap: 1.5em;
+}
+.harga span {
+  font-size: 3em;
+  font-weight: bold;
+}
+.card-1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* isi rata atas-bawah */
+  background-color: #2a2a2a;
+  border: solid 0.75px #ef400b;
+  border-radius: 1.5em;
+  padding: 1.5em 2em;
+  flex: 1 1 300px; /* bisa melebar tapi minimal 300px */
+  max-width: 350px;
+  box-shadow: 0 0 10px #ef400b22;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card-1:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 20px #ef400b33;
+}
+
+/* ====== ISI UL ====== */
+.card-1 ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-grow: 1; /* biar isi bisa menyesuaikan tinggi */
+}
+.card-1 ul h2 {
+  color: #ef400b;
+  font-size: 1.25em;
+  margin-bottom: 0.5em;
+  border-bottom: 1px solid #ef400b55;
+  padding-bottom: 0.3em;
+  text-align: left;
+}
+.card-1 ul li {
+  position: relative;
+  padding-left: 26px;
+  margin-bottom: 0.4em;
+  font-size: 0.95em;
+  opacity: 0.85;
+  line-height: 1.4;
+}
+.card-1 ul li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23ef400b' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'><path d='M20 6 9 17l-5-5'/></svg>") no-repeat center;
+  background-size: contain;
+}
+#btn-paket {
+  margin: 1em auto 0 auto;
+  background: #ef400b;
+  color: white;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+#btn-paket:hover {
+  background-color: var(--primary-light-hover-color);
+}
+/* .card-2 {
+  display: flex;
+  background-color: #333;
+  border: solid 0.75px #ef400b;
+  border-radius: 2em;
+  padding: 0 2em 2em 0;
+  width: auto;
+  height: 12em;
+}
+.card-3 {
+  display: flex;
+  background-color: #333;
+  border: solid 0.75px #ef400b;
+  border-radius: 2em;
+  padding: 0 2em 2em 0;
+  width: auto;
+  height: 12em;
+} */
+
+
+
+
+
+
+
+
+
+
 /* Footer Modern X-Net */
 .footer {
   background: #111111;
@@ -514,7 +655,9 @@ nav ul li:hover > ul {
   transition: all 0.2s cubic-bezier(.4,0,.2,1);
 }
 .form-group input:focus,
-.form-group textarea:focus {
+.form-group input:not(:placeholder-shown),
+.form-group textarea:focus,
+.form-group textarea:not(:placeholder-shown) {
   border-top-left-radius: 0;
 }
 .form-group label {

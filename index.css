@@ -784,7 +784,9 @@ nav ul li:hover > ul {
   transition: all 0.2s cubic-bezier(.4,0,.2,1);
 }
 .form-group input:focus,
-.form-group textarea:focus {
+.form-group input:not(:placeholder-shown),
+.form-group textarea:focus,
+.form-group textarea:not(:placeholder-shown) {
   border-top-left-radius: 0;
 }
 .form-group label {
