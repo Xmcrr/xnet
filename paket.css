@@ -10,12 +10,33 @@ html {
     scrollbar-width: thin;
     scrollbar-gutter: stable;
 }
-body {
-    font-family: "Montserrat", Helvetica, sans-serif;
-    margin: 0;
-    background-color: #000;
+html a {
+  text-decoration: none;
+  color: white;
+  font-family: "Montserrat", Helvetica, sans-serif;
 }
-@keyframes footer {
+head {
+  box-sizing: border-box;
+}
+header {
+  background-image: url();
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 70px;
+}
+body {
+  font-family: "Montserrat", Helvetica, sans-serif;
+  margin: 0;
+  background-color: #000;
+  color: white;
+}
+.btn-h a {
+  font-family: "Montserrat", Helvetica, sans-serif;;
+}
+.btn-s {
+  font-family: "Montserrat", Helvetica, sans-serif;;
+}frames footer {
   from{
     transform: translateY(100%);
     opacity: 0;

@@ -10,6 +10,11 @@ html {
   scrollbar-width: thin;
   scrollbar-gutter: stable;
 }
+html a {
+  text-decoration: none;
+  color: white;
+  font-family: "Montserrat", Helvetica, sans-serif;
+}
 head {
   box-sizing: border-box;
 }
@@ -27,6 +32,9 @@ body {
   color: white;
 }
 .btn-h a {
+  font-family: "Montserrat", Helvetica, sans-serif;;
+}
+.btn-s {
   font-family: "Montserrat", Helvetica, sans-serif;;
 }
 @keyframes footer {
