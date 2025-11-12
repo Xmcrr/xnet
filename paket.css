@@ -349,32 +349,42 @@ nav ul li:hover > ul {
 .bg-pcr {
   display: flex;
   flex-direction: column;
-  background-color: #33333390;
+  background-color: #33333300;
   text-align: center;
   padding: 1em;
   border-radius: 3em;
 }
-.plan-container {
+.plan-container-r {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 1em;
   border-radius: 2em;
-  background-color: #333333;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  /* box-shadow: var(--primary-glow); */
 }
 .plan-rumah {
   display: flex;
   flex-direction: column;
-  border: 0.75px solid #ef400b;
   border-radius: 1em;
   margin: 1em;
   padding: 1em;
   min-width: 250px;
   max-width: 300px;
-  background-color: #ffffff10;
   animation: fade linear;
   animation-timeline: view();
   animation-range: entry 0% cover 40%;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(2px);
+  transition: all 0.3s ease;
+}
+.plan-rumah:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 20px #ef400b, 0 0 40px #ef400b33;
+  border-color: var(--primary-color);
 }
 .plan-rumah ul,
 .plan-rumah p {
@@ -396,24 +406,43 @@ nav ul li:hover > ul {
 .bg-pcb {
   display: flex;
   flex-direction: column;
-  background-color: #33333390;
+  background-color: #33333300;
   text-align: center;
   padding: 1em;
   border-radius: 3em;
 }
+.plan-container-b {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1em;
+  border-radius: 2em;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  /* box-shadow: var(--primary-glow); */
+}
+
 .plan-bisnis {
   display: flex;
   flex-direction: column;
-  border: 0.75px solid #ef400b;
   border-radius: 1em;
   margin: 1em;
   padding: 1em;
   min-width: 250px;
   max-width: 300px;
-  background-color: #ffffff10;
   animation: fade linear;
   animation-timeline: view();
   animation-range: entry 0% cover 40%;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(2px);
+  transition: all 0.3s ease;
+}
+.plan-bisnis:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 20px #ef400b, 0 0 40px #ef400b33;
+  border-color: var(--primary-color);
 }
 .plan-bisnis ul,
 .plan-bisnis p {
@@ -435,24 +464,43 @@ nav ul li:hover > ul {
 .bg-pcg {
   display: flex;
   flex-direction: column;
-  background-color: #33333390;
+  background-color: #33333300;
   text-align: center;
   padding: 1em;
   border-radius: 3em;
 }
+.plan-container-g {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1em;
+  border-radius: 2em;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  /* box-shadow: var(--primary-glow); */
+}
+
 .plan-gaming {
   display: flex;
   flex-direction: column;
-  border: 0.75px solid #ef400b;
   border-radius: 1em;
   margin: 1em;
   padding: 1em;
   min-width: 250px;
   max-width: 300px;
-  background-color: #ffffff10;
   animation: fade linear;
   animation-timeline: view();
   animation-range: entry 0% cover 40%;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(2px);
+  transition: all 0.3s ease;
+}
+.plan-gaming:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 20px #ef400b, 0 0 40px #ef400b33;
+  border-color: var(--primary-color);
 }
 .plan-gaming ul,
 .plan-gaming p {

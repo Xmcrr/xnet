@@ -26,6 +26,9 @@ body {
   background-color: #000;
   color: white;
 }
+.btn-h a {
+  font-family: "Montserrat", Helvetica, sans-serif;;
+}
 @keyframes footer {
   from{
     transform: translateY(100%);
@@ -304,8 +307,9 @@ nav ul li:hover > ul {
   transform: translateY(4px);
   box-shadow: 0 0 0 0 #ce380a;  
 }
+
 .section-card {
-  background: #33333390;
+  background: #33333300;
   margin: 1em;
   padding: 0.5em;
   text-align: center;
@@ -333,6 +337,15 @@ nav ul li:hover > ul {
   animation: fade linear;
   animation-timeline: view();
   animation-range: entry 0% cover 35%;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(2px);
+  transition: all 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 20px #ef400b, 0 0 40px #ef400b33;
+  border-color: var(--primary-color);
 }
 .card:nth-child(2){
   animation-range: entry 0% cover 30%;
@@ -341,7 +354,11 @@ nav ul li:hover > ul {
   animation-range: entry 0% cover 25%;
 }
 .background-card {
-  background-color: #333333;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  transition: all 0.3s ease;
+  margin: 2em 1em;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -387,7 +404,7 @@ nav ul li:hover > ul {
   box-shadow: 0 0 0 0 #ce380a;
 }
 .section-plan {
-  background: #33333390;
+  /* background: #33333390; */
   margin: 1em;
   padding: 0.5em;
   text-align: left;
@@ -405,7 +422,6 @@ nav ul li:hover > ul {
   flex-direction: column;
 }
 .card-plan {
-  background-color: #ffffff10;
   width: 18em;
   height: 26em;
   margin: 1.5em;
@@ -414,6 +430,15 @@ nav ul li:hover > ul {
   animation: fade linear;
   animation-timeline: view();
   animation-range: entry 0% cover 40%;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(2px);
+  transition: all 0.3s ease;
+}
+.card-plan:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 20px #ef400b, 0 0 40px #ef400b33;
+  border-color: var(--primary-color);
 }
 .card-plan:nth-child(2){
   scale: 1.05;
@@ -429,6 +454,10 @@ nav ul li:hover > ul {
   animation: fade linear;
   animation-timeline: view();
   animation-range: entry 0% cover 40%;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  transition: all 0.3s ease;
 }
 .bg-background-card-plan {
   display: flex;
@@ -500,21 +529,20 @@ nav ul li:hover > ul {
 }
 .fitur-paket li {
   position: relative;
-  padding-left: 28px; /* space buat icon */
+  padding-left: 28px; 
 }
 .fitur-paket li::before {
   content: "";
   position: absolute;
   left: 0;
   top: 50%;
-  transform: translateY(-50%); /* bener2 center */
+  transform: translateY(-50%);
   width: 20px;
   height: 20px;
   background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'><path d='M20 6 9 17l-5-5'/></svg>") no-repeat center;
   background-size: contain;
 }
 .section-review {
-  background: #33333390;
   margin: 1em;
   padding: 0.5em;
   text-align: center;
@@ -533,7 +561,6 @@ nav ul li:hover > ul {
   margin: 1.5em;
 }
 .card-review {
-  background-color: #ffffff10;
   width: 18em;
   height: 24em;
   margin: 1.5em;
@@ -545,9 +572,17 @@ nav ul li:hover > ul {
   display: flex;
   flex-direction: column;
   /* height: 100%; */
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(2px);
+  transition: all 0.3s ease;
+}
+.card-review:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 20px #ef400b, 0 0 40px #ef400b33;
+  border-color: var(--primary-color);
 }
 .background-card-review {
-  background-color: #333333;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -557,6 +592,10 @@ nav ul li:hover > ul {
   animation: fade linear;
   animation-timeline: view();
   animation-range: entry 0% cover 40%;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  transition: all 0.3s ease;
 }
 .bg-background-card-review {
   display: flex;

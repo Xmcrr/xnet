@@ -144,18 +144,11 @@ nav ul li:hover > ul {
     backdrop-filter: blur(5px);
     border: 0.5px solid #ffffff55;
 }
-.aduh {
+#h {
   color: #ef400b;
   transition: all 0.3s ease;
 }
-.aduh:hover{
-  color: white;
-}
-#c {
-  color: #ef400b;
-  transition: all 0.3s ease;
-}
-#c:hover{
+#h:hover{
   color: white;
 }
 @keyframes bg-anim {
@@ -336,154 +329,263 @@ nav ul li:hover > ul {
   animation: enter 0.5s backwards 1.2s;
 }
 
-.fitur-paket {
-  list-style: none;
-  padding-left: 0;
-}
-.fitur-paket li {
-  position: relative;
-  padding-left: 28px; /* space buat icon */
-}
-.fitur-paket li::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%); /* bener2 center */
-  width: 20px;
-  height: 20px;
-  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'><path d='M20 6 9 17l-5-5'/></svg>") no-repeat center;
-  background-size: contain;
-}
-.case {
-  position: relative;
-  margin: 2em 1em;
-  padding: 1em;
-  border-radius: 1em;
-  display: flex;
-  justify-content: center;
-  color: white;
-  animation: enter 1s backwards 1.2s;
-}
-.bg-pcr-1 {
+/* PROFIL SECTION */
+.profil {
   display: flex;
   flex-direction: column;
-  /* background-color: #33333390; */
-  padding: 2em;
-  justify-content: center;
   align-items: center;
-}
-
-.waduh {
-  display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: center;
-  gap: 1em;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: 1.5em;
-  padding: 2em;
-  backdrop-filter: blur(12px);
-  transition: all 0.3s ease;
+  gap: 2em;
+  padding: 4em 1.5em;
+  animation: fadein 1s ease 1.4s both;
 }
 
-.bg-pcr-1 h1 {
-  font-size: 2em;
-  margin: 0;
-  text-align: center;
-  color: #fff;
-  text-shadow: 0 0 10px #ef400b55;
-}
-
-.bg-pcr-1 p {
-  font-size: 1em;
-  margin: 0.75em 1em 1.5em 1em;
-  text-align: center;
-  opacity: 0.9;
-}
-
-.case-card {
+/* CARD PROFIL */
+.profil-card {
   display: flex;
-  justify-content: center;
-  align-items: stretch; /* <— ini biar tinggi card seragam */
   flex-wrap: wrap;
-  gap: 1.5em;
-}
-.harga span {
-  font-size: 3em;
-  font-weight: bold;
-  color: var(--primary-color);
-  text-shadow: 0 0 6px #ef400b66;
-}
-.card-1 {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between; /* isi rata atas-bawah */
+  align-items: center;
+  justify-content: center;
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 1.5em;
-  padding: 1.5em 2em;
-  flex: 1 1 300px; /* bisa melebar tapi minimal 300px */
-  max-width: 350px;
-  box-shadow: 0 0 10px #ef400b22;
+  padding: 2em;
+  gap: 2em;
+  backdrop-filter: blur(12px);
+  /* box-shadow: var(--primary-glow); */
+  width: 80%;
+  max-width: 900px;
   transition: all 0.3s ease;
-  backdrop-filter: blur(2px);
 }
-.card-1:hover {
+.profil-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 0 20px #ef400b, 0 0 40px #ef400b33;
   border-color: var(--primary-color);
 }
 
-/* ====== ISI UL ====== */
-.card-1 ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  flex-grow: 1; /* biar isi bisa menyesuaikan tinggi */
-}
-.card-1 ul h2 {
+/* FOTO PROFIL */
+.profil-foto .foto-wadah {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 3px solid #ef400b;
+  box-shadow: var(--primary-glow);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: #ef400b;
-  font-size: 1.25em;
-  margin-bottom: 0.5em;
-  border-bottom: 1px solid #ef400b55;
-  padding-bottom: 0.3em;
-  text-align: left;
-}
-.card-1 ul li {
-  position: relative;
-  padding-left: 26px;
-  margin-bottom: 0.4em;
-  font-size: 0.95em;
-  opacity: 0.85;
-  line-height: 1.4;
-}
-.card-1 ul li::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 16px;
-  height: 16px;
-  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'><path d='M20 6 9 17l-5-5'/></svg>") no-repeat center;
-  background-size: contain;
-}
-#btn-paket {
-  margin: 1em auto 0 auto;
-  background: #ef400b;
-  color: white;
-  border: none;
-  padding: 12px 28px;
-  border-radius: 12px;
-  cursor: pointer;
-  font-weight: 600;
+  font-weight: 700;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(2px);
   transition: all 0.3s ease;
 }
-#btn-paket:hover {
-  background-color: var(--primary-light-hover-color);
+.foto-wadah img {
+  width: 200px;
+  height: 200px;
+  clip-path: circle();
+  object-fit: cover;
+  z-index: -1;
 }
+.profil-foto .foto-wadah:hover {
+  background: rgba(239, 64, 11, 0.1);
+  box-shadow: 0 0 25px #ef400b;
+}
+
+/* INFO PROFIL */
+.profil-info {
+  max-width: 500px;
+}
+.profil-info h2 {
+  font-size: 1.8em;
+  color: var(--primary-color);
+  margin-bottom: 0.5em;
+  text-shadow: 0 0 6px #ef400b66;
+  margin-top: 0;
+}
+.profil-info p {
+  font-size: 1em;
+  color: white;
+  opacity: 0.9;
+  line-height: 1.6em;
+  margin-bottom: 1em;
+  text-align: justify;
+}
+.profil-detail p {
+  margin: 0.2em 0;
+  opacity: 0.85;
+}
+
+/* SOSIAL MEDIA */
+.profil-sosial {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 1em;
+  padding: 1.5em 2em;
+  text-align: center;
+  backdrop-filter: blur(12px);
+  box-shadow: var(--primary-glow);
+  width: 80%;
+  max-width: 900px;
+  transition: all 0.3s ease;
+}
+.profil-sosial:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 20px #ef400b, 0 0 40px #ef400b33;
+  border-color: var(--primary-color);
+}
+.profil-sosial h2 {
+  color: var(--primary-color);
+  text-shadow: 0 0 6px #ef400b66;
+  margin-top: 0;
+}
+.sosial-link {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1em;
+  margin-top: 0.5em;
+}
+.btn-sosial {
+  text-decoration: none;
+  color: white;
+  padding: 0.6em 1.5em;
+  border: 1px solid var(--primary-color);
+  border-radius: 1em;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(2px);
+  box-shadow: var(--primary-glow);
+  transition: all 0.3s ease;
+}
+.btn-sosial:hover {
+  color: #fff;
+  background: rgba(239, 64, 11, 0.3);
+  transform: translateY(-3px);
+}
+
+/* KONTAK */
+.profil-kontak {
+  text-align: center;
+  color: white;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 1em;
+  padding: 1.5em 2em;
+  text-align: center;
+  backdrop-filter: blur(12px);
+  /* box-shadow: var(--primary-glow); */
+  width: 80%;
+  max-width: 900px;
+  transition: all 0.3s ease;
+}
+.profil-kontak:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 20px #ef400b, 0 0 40px #ef400b33;
+  border-color: var(--primary-color);
+}
+.profil-kontak h2 {
+  color: var(--primary-color);
+  margin-top: 0;
+  text-shadow: 0 0 6px #ef400b66;
+}
+.profil-kontak a {
+  color: #fff;
+  text-decoration: none;
+  border-bottom: 1px solid #ef400b;
+  transition: all 0.3s ease;
+}
+.profil-kontak a:hover {
+  color: var(--primary-color);
+}
+
+/* MOTTO */
+.profil-motto {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 1em;
+  padding: 1.5em 2em;
+  text-align: center;
+  backdrop-filter: blur(12px);
+  box-shadow: var(--primary-glow);
+  width: 80%;
+  max-width: 900px;
+  transition: all 0.3s ease;
+}
+.profil-motto:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 20px #ef400b, 0 0 40px #ef400b33;
+  border-color: var(--primary-color);
+}
+.profil-motto h2 {
+  color: var(--primary-color);
+  margin-top: 0;
+  text-shadow: 0 0 6px #ef400b66;
+  
+}
+.profil-motto p {
+  color: white;
+  font-size: 1.1em;
+  opacity: 0.85;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .profil-card {
+    flex-direction: column;
+    text-align: center;
+  }
+  .profil-info {
+    max-width: 90%;
+  }
+  .profil-motto {
+    width: 90%;
+  }
+}
+
+/* Animasi */
+@keyframes fadein {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+    filter: blur(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+.profil-card,
+.profil-sosial,
+.profil-kontak,
+.profil-motto {
+  background: rgba(255, 255, 255, 0.1); /* Naikin opacity biar keliatan */
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 1.5em;
+  padding: 2em;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px); /* penting buat Chrome & Safari */
+  background-clip: padding-box;
+  box-shadow:
+    0 4px 30px rgba(0, 0, 0, 0.2),
+    0 0 15px #ef400b22; /* subtle orange glow */
+  transition: all 0.3s ease;
+}
+
+.profil-card:hover,
+.profil-sosial:hover,
+.profil-kontak:hover,
+.profil-motto:hover {
+  transform: translateY(-6px);
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow:
+    0 0 20px #ef400b,
+    0 0 40px #ef400b44;
+}
+
+
 /* Footer Modern X-Net */
 .footer {
   background: #111111;

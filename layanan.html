@@ -1,14 +1,14 @@
 <html>
   <head>
-    <title>X-Net | Order</title>
-    <link rel="stylesheet" href="order.css">
+    <title>X-Net | Layanan</title>
+    <link rel="stylesheet" href="layanan.css">
     <link rel="icon" href="gmbr/logo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
   </head>
   <body>
-    <a name="order"></a>
+    <a name="layanan"></a>
     <div class="bg-animasi">
       <div class="box-animasi">
         <div></div>
@@ -40,98 +40,54 @@
             <li><a id="e" href="paket-g.html"><b>Gaming</b></a></li>
           </ul>
         </li>
-        <li><a id="f" href="#order"><b>Order</b></a></li>
-        <li><a id="g" href="layanan.html"><b>Layanan</b></a></li>
+        <li><a id="f" href="order.html"><b>Order</b></a></li>
+        <li><a id="g" href="#layanan"><b>Layanan</b></a></li>
         <li><a id="h" href="profil.html"><b>Profil</b></a></li>
       </ul>
     </nav>
-<!-- Header -->
-  <section class="header">
-    <div class="header-container">
-      <div class="header-content">
-        <p>Form Pemesanan X-Net</p>
-        <p>Isi data di bawah ini untuk memulai langganan internet X-Net sesuai kebutuhanmu.</p>
+    <section class="header">
+      <div class="header-container">
+        <div class="header-content">
+          <p>Paket Bisnis — Produktivitas & Stabilitas</p>
+          <p>Bangun bisnis yang selalu terkoneksi dengan internet cepat, stabil, dan aman. X-Net Business memastikan operasional bisnismu berjalan lancar setiap hari dengan dukungan teknis profesional dan layanan prioritas.</p>
+        </div>
       </div>
+    </section>
+
+<section class="services">
+  <div class="service-container">
+    <div class="service-card">
+      <h2>Instalasi Cepat & Profesional</h2>
+      <p>Tim teknisi kami siap melakukan instalasi di lokasi Anda dengan cepat, rapi, dan aman. Pemasangan dilakukan sesuai standar industri dengan peralatan modern.</p>
+      <ul>
+        <li>Jadwal fleksibel sesuai kebutuhan pelanggan</li>
+        <li>Proses rata-rata kurang dari 24 jam</li>
+        <li>Gratis konsultasi sebelum pemasangan</li>
+      </ul>
     </div>
-  </section>
 
-  <!-- Form Pemesanan -->
-  <section class="order-section">
-    <form class="order-form">
-      <div class="form-group">
-        <label for="nama">Nama Lengkap</label>
-        <input type="text" id="nama" name="nama" required placeholder="Masukkan nama kamu" />
-      </div>
+    <div class="service-card">
+      <h2>Dukungan Teknis 24/7</h2>
+      <p>Butuh bantuan? Tim support kami siap 24 jam setiap hari melalui berbagai saluran — dari chat, email, hingga panggilan langsung.</p>
+      <ul>
+        <li>Respons cepat maksimal 10 menit</li>
+        <li>Remote troubleshooting tanpa biaya tambahan</li>
+        <li>Layanan onsite untuk gangguan berat</li>
+      </ul>
+    </div>
 
-      <div class="form-group">
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" required placeholder="Masukkan email aktif" />
-      </div>
-
-      <div class="form-group">
-        <label for="telepon">Nomor Telepon</label>
-        <input type="tel" id="telepon" name="telepon" pattern="[0-9]{9,12}" required placeholder="08xxxxxxxxxx" />
-      </div>
-
-      <div class="form-group">
-        <label for="alamat">Alamat Lengkap</label>
-        <textarea id="alamat" name="alamat" style="resize: vertical; min-height: 100px; max-height: 200px;" required placeholder="Masukkan alamat pemasangan"></textarea>
-      </div>
-
-      <div class="form-group">
-        <label for="paket">Pilih Paket</label>
-        <select id="paket" name="paket" required>
-          <option value="">-- Pilih Paket --</option>
-          <option value="essential">Paket Essential</option>
-          <option value="bisnis">Paket Bisnis</option>
-          <option value="gaming">Paket Gaming</option>
-        </select>
-      </div>
-
-      <div class="form-group">
-        <label for="plan">Pilih Plan</label>
-        <select id="plan" name="plan" required>
-          <option value="">-- Pilih Plan --</option>
-          <option value="A">Plan A</option>
-          <option value="B">Plan B</option>
-          <option value="C">Plan C</option>
-        </select>
-      </div>
-
-      <div class="form-group">
-        <label for="metode">Metode Pembayaran</label>
-        <select id="metode" name="metode" required>
-          <option value="">-- Pilih Metode Pembayaran --</option>
-          <option value="transfer">Transfer Bank</option>
-          <option value="cod">Bayar di Tempat (COD)</option>
-          <option value="qris">QRIS</option>
-        </select>
-      </div>
-
-      <button type="submit" class="btn" id="kirpes">Kirim Pesanan</button>
-    </form>
-  </section>
-  <!-- Popup Konfirmasi -->
-<div id="popup-konfirmasi" class="popup">
-  <div class="popup-content">
-    <h2>Konfirmasi Pesanan</h2>
-    <p>Apakah Anda yakin ingin mengirim pesanan ini?</p>
-    <div class="popup-buttons">
-      <button id="batalBtn" class="btn cancel">Batalkan</button>
-      <button id="konfirmasiBtn" class="btn confirm">Konfirmasi</button>
+    <div class="service-card">
+      <h2>Layanan Tambahan & Maintenance</h2>
+      <p>Kami menyediakan berbagai layanan tambahan agar pengalaman internet Anda semakin maksimal dan tanpa hambatan.</p>
+      <ul>
+        <li>Upgrade bandwidth kapan saja</li>
+        <li>Paket backup koneksi cadangan</li>
+        <li>Monitoring performa jaringan real-time</li>
+      </ul>
     </div>
   </div>
-</div>
+</section>
 
-<!-- Popup Sukses -->
-<div id="popup-sukses" class="popup">
-  <div class="popup-content">
-    <button class="close-btn" id="closeSukses">✕</button>
-    <h2>Pemesanan Berhasil 🎉</h2>
-    <p>Terima kasih! Pesanan Anda sedang kami proses.<br>Tim kami akan segera menghubungi Anda.</p>
-    <button id="tutupBtn" class="btn confirm">Tutup</button>
-  </div>
-</div>
 
 
     <footer class="footer">
@@ -148,14 +104,14 @@
         <div class="footer-title">Navigasi</div>
         <a id="a" href="index.html">Home</a>
         <a id="f" href="order.html">Order</a>
-        <a id="g" href="services.html">Layanan</a>
+        <a id="g" href="#layanan">Layanan</a>
         <a id="h" href="profil.html">Profil</a>
       </div>
       <div class="footer-box">
         <div class="footer-title"><a id="b" href="paket.html">Paket Internet</a></div>
         <a id="c" href="paket-r.html">Paket Rumah</a>
         <a id="d" href="paket-b.html">Paket Bisnis</a>
-        <a id="e" href="#gaming">Paket Gaming</a>
+        <a id="e" href="paket-g.html">Paket Gaming</a>
       </div>
       <div class="footer-box">
         <div class="footer-title">Hubungi Kami</div>
@@ -178,6 +134,6 @@
       <hr style="opacity: 0.25; max-width: 80%; margin: 0%;">
       <p style="text-align: center; margin-top: 1em; margin-bottom: 0;">&copy; 2025 X-Net | XGZ - IF1. All rights reserved.</p>
     </footer>
-<script src="order.js"></script>
+<script src=""></script>
 </body>
 </html>

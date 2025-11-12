@@ -144,18 +144,11 @@ nav ul li:hover > ul {
     backdrop-filter: blur(5px);
     border: 0.5px solid #ffffff55;
 }
-.aduh {
+#f {
   color: #ef400b;
   transition: all 0.3s ease;
 }
-.aduh:hover{
-  color: white;
-}
-#c {
-  color: #ef400b;
-  transition: all 0.3s ease;
-}
-#c:hover{
+#f:hover{
   color: white;
 }
 @keyframes bg-anim {
@@ -335,143 +328,82 @@ nav ul li:hover > ul {
   font-size: 1em;
   animation: enter 0.5s backwards 1.2s;
 }
-
-.fitur-paket {
-  list-style: none;
-  padding-left: 0;
-}
-.fitur-paket li {
-  position: relative;
-  padding-left: 28px; /* space buat icon */
-}
-.fitur-paket li::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%); /* bener2 center */
-  width: 20px;
-  height: 20px;
-  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'><path d='M20 6 9 17l-5-5'/></svg>") no-repeat center;
-  background-size: contain;
-}
-.case {
-  position: relative;
-  margin: 2em 1em;
-  padding: 1em;
-  border-radius: 1em;
-  display: flex;
-  justify-content: center;
-  color: white;
-  animation: enter 1s backwards 1.2s;
-}
-.bg-pcr-1 {
-  display: flex;
-  flex-direction: column;
-  /* background-color: #33333390; */
+.order-section {
+  animation: enter 1s backwards 1.4s;
+  /* margin-top: 2em; */
   padding: 2em;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
 }
 
-.waduh {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 1em;
+.order-form {
+  max-width: 600px;
+  margin: 2em auto;
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: 1.5em;
-  padding: 2em;
   backdrop-filter: blur(12px);
-  transition: all 0.3s ease;
-}
-
-.bg-pcr-1 h1 {
-  font-size: 2em;
-  margin: 0;
-  text-align: center;
-  color: #fff;
-  text-shadow: 0 0 10px #ef400b55;
-}
-
-.bg-pcr-1 p {
-  font-size: 1em;
-  margin: 0.75em 1em 1.5em 1em;
-  text-align: center;
-  opacity: 0.9;
-}
-
-.case-card {
-  display: flex;
-  justify-content: center;
-  align-items: stretch; /* <— ini biar tinggi card seragam */
-  flex-wrap: wrap;
-  gap: 1.5em;
-}
-.harga span {
-  font-size: 3em;
-  font-weight: bold;
-  color: var(--primary-color);
-  text-shadow: 0 0 6px #ef400b66;
-}
-.card-1 {
+  padding: 2em;
+  border-radius: 20px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* isi rata atas-bawah */
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: 1.5em;
-  padding: 1.5em 2em;
-  flex: 1 1 300px; /* bisa melebar tapi minimal 300px */
-  max-width: 350px;
-  box-shadow: 0 0 10px #ef400b22;
-  transition: all 0.3s ease;
-  backdrop-filter: blur(2px);
+  gap: 1.2em;
 }
-.card-1:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 0 20px #ef400b, 0 0 40px #ef400b33;
+
+.order-form .form-group {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 100%;
+  margin-bottom: 1em;
+}
+
+.order-form .form-group label {
+  font-weight: 600;
+  margin-bottom: 0.3em;
+  color: #fff;
+  font-size: 1em;
+  color: white;
+  margin-top: 0;
+  /* text-shadow: 0 0 6px #ef400b66; */
+}
+
+.order-form input,
+.order-form textarea,
+.order-form select {
+  padding: 0.8em;
+  border: 1px solid #555;
+  border-radius: 8px;
+  background: #222;
+  color: white;
+  outline: none;
+  transition: border 0.3s ease;
+  font-family: inherit;
+}
+
+.order-form input:focus,
+.order-form textarea:focus,
+.order-form select:focus {
   border-color: var(--primary-color);
 }
 
-/* ====== ISI UL ====== */
-.card-1 ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  flex-grow: 1; /* biar isi bisa menyesuaikan tinggi */
+/* Tombol utama */
+.btn-order {
+  background: var(--primary-color);
+  border: none;
+  color: white;
+  font-size: 1em;
+  font-weight: bold;
+  padding: 0.9em;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
 }
-.card-1 ul h2 {
-  color: #ef400b;
-  font-size: 1.25em;
-  margin-bottom: 0.5em;
-  border-bottom: 1px solid #ef400b55;
-  padding-bottom: 0.3em;
-  text-align: left;
-}
-.card-1 ul li {
-  position: relative;
-  padding-left: 26px;
-  margin-bottom: 0.4em;
-  font-size: 0.95em;
-  opacity: 0.85;
-  line-height: 1.4;
-}
-.card-1 ul li::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 16px;
-  height: 16px;
-  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'><path d='M20 6 9 17l-5-5'/></svg>") no-repeat center;
-  background-size: contain;
-}
-#btn-paket {
-  margin: 1em auto 0 auto;
+/* .btn-order:hover {
+  background: var(--primary-hover-color);
+  transform: scale(0.98);
+} */
+#kirpes {
+  margin: 1em 0 0 0;
   background: #ef400b;
   color: white;
   border: none;
@@ -481,19 +413,21 @@ nav ul li:hover > ul {
   font-weight: 600;
   transition: all 0.3s ease;
 }
-#btn-paket:hover {
+#kirpes:hover {
   background-color: var(--primary-light-hover-color);
 }
-/* Footer Modern X-Net */
-.footer {
-  background: #111111;
+
+/* =======================================================
+ 🦶 FOOTER — X-NET UNIVERSAL STYLE
+========================================================= */
+footer.footer {
+  background: #111;
   color: #fff;
   padding: 3em 0 1.5em 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  row-gap: space-between;
-  column-gap: 0.5em;
+  gap: 1em;
   border-top: 2px solid var(--primary-color);
   box-shadow: 0 -2px 24px 0 #ef400b33;
   position: relative;
@@ -502,6 +436,7 @@ nav ul li:hover > ul {
   animation-timeline: view();
   animation-range: entry -200%;
 }
+
 .footer-box {
   min-width: 180px;
   max-width: 260px;
@@ -510,9 +445,11 @@ nav ul li:hover > ul {
   flex-direction: column;
   gap: 0.5em;
 }
+
 .footer-box:first-child {
   flex: 2;
 }
+
 .footer-box p,
 .footer-box div,
 .footer-box a {
@@ -521,120 +458,85 @@ nav ul li:hover > ul {
   font-size: 1em;
   margin: 0.2em 0;
   text-decoration: none;
-  transition: color 0.2s;
+  transition: color 0.25s ease;
 }
+
 .footer-box a:hover {
   color: var(--primary-color);
   opacity: 1;
 }
+
 .footer-box .footer-title {
   font-size: 1.25em;
   font-weight: bold;
   color: white;
   margin-bottom: 0.5em;
   letter-spacing: 1px;
-  opacity: 1;
   text-align: left;
-  display: block;
 }
-.footer-social {
+
+.footer-social,
+.sosmet {
   display: flex;
   gap: 1em;
   margin-top: 0.5em;
 }
-.footer-social a {
-  color: #fff;
-  font-size: 1.5em;
-  transition: color 0.2s;
+
+.sosmet a svg {
+  transition: all 0.25s ease;
 }
-.footer-social a:hover {
-  color: var(--primary-color);
+.sosmet a:hover svg {
+  transform: scale(1.15);
+  stroke: var(--primary-color);
+  fill: var(--primary-color);
 }
+
 .footer hr {
   opacity: 0.15;
   border: none;
   border-top: 1px solid #fff;
-  margin: 2em auto 1em auto;
+  margin: 2em auto 1em;
   width: 80%;
 }
-.footer-copyright {
-  width: 100%;
-  text-align: center;
+
+.footer p {
   font-size: 0.95em;
-  opacity: 0.6;
-  margin-top: 1em;
+  opacity: 0.7;
+  margin: 0.5em auto;
+  text-align: center;
   letter-spacing: 0.5px;
 }
-/* Footer Contact Us */
-.footer-box input,
-.footer-box textarea {
-  background: #222;
-  color: #fff;
-  border: none;
-  border-bottom: 2px solid #ffffff50;
-  border-radius: 0;
-  padding: 0.6em 0.5em 0.6em 0.5em;
-  font-size: 1em;
-  resize: none;
-  outline: none;
-  transition: border-bottom 0.5s;
-}
-.footer-box input:focus,
-.footer-box textarea:focus {
-  border-bottom: 2px solid var(--primary-hover-color);
-}
-/* Samakan font dan padding textarea dengan input */
-.footer-box textarea {
-  font-family: inherit;
-  font-size: 1em;
-  padding: 0.6em 0.5em 0.6em 0.5em;
-  min-height: 38px;
-  max-height: 120px;
-  box-sizing: border-box;
-  line-height: 1.4;
-}
-/* Tombol Kirim compact ala WhatsApp */
+
+/* ===============================
+💬 FORM KONTAK DALAM FOOTER
+=============================== */
 .footer-box form {
   display: flex;
   flex-direction: column;
-  gap: 0.5em;
+  gap: 0.75em;
   align-items: flex-end;
 }
-/* Icon kirim (SVG) di dalam tombol */
-.footer-box form .btn svg {
-  width: 1.2em;
-  height: 1.2em;
-  display: block;
-}
-.sosmet {
-  display: flex;
-  gap: 1em;
-}
 
-.sosmet div a:hover {
-  color: #fff;
-  opacity: 1;
-}
-/* Floating label group */
-.form-group {
+.footer-box .form-group {
   position: relative;
-  margin-bottom: 1.5em;
   width: 100%;
 }
-.form-group input,
-.form-group textarea {
-  width: 16em;
+
+.footer-box input,
+.footer-box textarea {
+  width: 100%;
   background: #222;
   color: #fff;
   border: none;
   border-bottom: 2px solid #ffffff50;
   border-radius: 0;
-  padding: 0.9em 0.5em 0.5em 0.5em;
+  padding: 0.8em 0.5em 0.5em;
   font-size: 1em;
   font-family: inherit;
   outline: none;
+  resize: none;
   border-radius: 1em;
-  transition: all 0.2s cubic-bezier(.4,0,.2,1);
+  transition: border-bottom 0.3s ease;
 }
 .form-group input:focus,
 .form-group input:not(:placeholder-shown),
@@ -642,17 +544,22 @@ nav ul li:hover > ul {
 .form-group textarea:not(:placeholder-shown) {
   border-top-left-radius: 0;
 }
-.form-group label {
+.footer-box input:focus,
+.footer-box textarea:focus {
+  border-bottom: 2px solid var(--primary-color);
+}
+
+/* Floating Label Style */
+.footer-box label {
   position: absolute;
   left: 0.5em;
   top: 0.9em;
   color: #aaa;
   font-size: 1em;
   pointer-events: none;
-  background: transparent;
   transition: all 0.2s cubic-bezier(.4,0,.2,1);
 }
-/* Saat input focus atau ada isinya, label naik ke atas */
+
 .form-group input:focus + label,
 .form-group input:not(:placeholder-shown) + label,
 .form-group textarea:focus + label,
@@ -666,45 +573,143 @@ nav ul li:hover > ul {
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 }
-.contact-footer-form {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-.contact-footer-form .btn {
-  align-self: flex-end;
+
+/* Tombol kirim footer */
+.footer-box .btn-s {
   background: var(--primary-color);
   color: white;
-  padding: 12px 28px;
-  font-size: 16px;
+  padding: 10px 24px;
+  font-size: 0.95em;
   font-weight: 600;
   border: 1px solid var(--primary-color);
   border-radius: 12px;
   cursor: pointer;
-  backdrop-filter: blur();
   box-shadow: 0 4px #ce380a;
-  transition: all 0.3s ease;
-} 
-/* asset button bagus yg ada primary crlornya */
-.btn-s {
-  background: var(--primary-color);
-  color: white;
-  padding: 12px 28px;
-  font-size: 16px;
-  font-weight: 600;
-  border: 1px solid var(--primary-color);
-  border-radius: 12px;
-  cursor: pointer;
-  backdrop-filter: blur();
-  box-shadow: 0 4px #ce380a;
-  transition: all 0.1s linear;
+  transition: all 0.15s ease-in-out;
 }
-.btn-s:hover {
+
+.footer-box .btn-s:hover {
   background-color: var(--primary-light-hover-color);
-  /* transform: scale(0.95); */
+  transform: scale(0.97);
 }
-.btn-s:active {
-  /* transform: scale(0.995);  */
+.footer-box .btn-s:active {
   transform: translateY(4px);
-  box-shadow: 0 0 0 0 #ce380a;  
+  box-shadow: 0 0 0 0 #ce380a;
+}
+
+/* ===============================
+📱 RESPONSIVE FOOTER
+=============================== */
+@media (max-width: 768px) {
+  footer.footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-box {
+    max-width: 90%;
+    margin-bottom: 2em;
+  }
+
+  .footer hr {
+    width: 90%;
+  }
+}
+/* ==== POPUP STYLES ==== */
+.popup {
+  display: none; /* disembunyikan dulu */
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(6px);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  animation: fadeIn 0.3s ease;
+}
+
+.popup-content {
+  background: #1c1c1c;
+  border: 1px solid #ef400b;
+  box-shadow: 0 0 25px rgba(239, 64, 11, 0.3);
+  border-radius: 16px;
+  padding: 2em;
+  text-align: center;
+  max-width: 400px;
+  width: 90%;
+  animation: slideUp 0.4s ease;
+  position: relative;
+}
+
+.popup-content h2 {
+  margin-bottom: 0.5em;
+  color: #fff;
+}
+
+.popup-content p {
+  color: #ddd;
+  font-size: 0.95em;
+  margin-bottom: 1.5em;
+}
+
+.popup-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+}
+
+.btn {
+  padding: 0.7em 1.4em;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn.confirm {
+  background: #ef400b;
+  color: white;
+}
+
+.btn.confirm:hover {
+  background: #ff5c26;
+  transform: scale(1.05);
+}
+
+.btn.cancel {
+  background: #333;
+  color: #fff;
+}
+
+.btn.cancel:hover {
+  background: #444;
+}
+
+.close-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 1.4em;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.close-btn:hover {
+  color: #ef400b;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(40px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
 }
